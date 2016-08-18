@@ -7,23 +7,23 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
 
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
-  ],
+  // plugins: [
+  //   new webpack.optimize.OccurenceOrderPlugin(),
+  //   new webpack.DefinePlugin({
+  //     'process.env': {
+  //       'NODE_ENV': JSON.stringify('production')
+  //     }
+  //   }),
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     compressor: {
+  //       warnings: false
+  //     }
+  //   })
+  // ],
   module: {
     loaders: [{
       test: /\.js$/,
