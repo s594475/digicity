@@ -5,6 +5,7 @@ import Three from './main/three';
 import Four from './main/four';
 import Five from './main/five';
 import Six from './main/six';
+import Seven from './main/seven';
 class Main extends React.Component {
   render () {
         return(
@@ -15,6 +16,7 @@ class Main extends React.Component {
               <Four />
               <Five />
               <Six />
+              <Seven />
           </div>
         )
   }
