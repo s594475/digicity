@@ -63,7 +63,7 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _reactTapEventPlugin = __webpack_require__(920);
+	var _reactTapEventPlugin = __webpack_require__(922);
 	
 	var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 	
@@ -21507,6 +21507,10 @@
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
+	var _Footer = __webpack_require__(921);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21536,7 +21540,8 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
-	        _react2.default.createElement(_Main2.default, null)
+	        _react2.default.createElement(_Main2.default, null),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -34748,6 +34753,10 @@
 	
 	var _six2 = _interopRequireDefault(_six);
 	
+	var _seven = __webpack_require__(920);
+	
+	var _seven2 = _interopRequireDefault(_seven);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34776,7 +34785,8 @@
 	        _react2.default.createElement(_three2.default, null),
 	        _react2.default.createElement(_four2.default, null),
 	        _react2.default.createElement(_five2.default, null),
-	        _react2.default.createElement(_six2.default, null)
+	        _react2.default.createElement(_six2.default, null),
+	        _react2.default.createElement(_seven2.default, null)
 	      );
 	    }
 	  }]);
@@ -104929,8 +104939,585 @@
 /* 920 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var invariant = __webpack_require__(921);
-	var defaultClickRejectionStrategy = __webpack_require__(922);
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Grid = __webpack_require__(428);
+	
+	var _Grid2 = _interopRequireDefault(_Grid);
+	
+	var _Row = __webpack_require__(468);
+	
+	var _Row2 = _interopRequireDefault(_Row);
+	
+	var _Col = __webpack_require__(469);
+	
+	var _Col2 = _interopRequireDefault(_Col);
+	
+	var _Thumbnail = __webpack_require__(470);
+	
+	var _Thumbnail2 = _interopRequireDefault(_Thumbnail);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Four = function (_React$Component) {
+	  _inherits(Four, _React$Component);
+	
+	  function Four() {
+	    _classCallCheck(this, Four);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Four).apply(this, arguments));
+	  }
+	
+	  _createClass(Four, [{
+	    key: 'render',
+	    value: function render() {
+	      var styles = _defineProperty({
+	        span: {
+	          color: 'red',
+	          fontSize: '3rem'
+	        },
+	        p: {
+	          fontSize: '3rem'
+	        },
+	        div: {
+	          width: '80%',
+	          marginLeft: '10%',
+	          paddingTop: '5rem',
+	          textAlign: 'center',
+	          borderBottom: '#cccccc solid 1px'
+	
+	        },
+	        col: {
+	          width: '24%'
+	
+	        },
+	        thum: {
+	          backgroundColor: "#cccccc"
+	        },
+	        box: {
+	          marginTop: '2rem',
+	          marginBottom: '2rem',
+	          width: '100%',
+	          margin: '0 auto',
+	          textAlign: 'center'
+	
+	        },
+	        a: {
+	          display: 'block',
+	          width: '15rem',
+	          height: '2rem',
+	          lineHeight: '2rem',
+	          backgroundColor: 'red',
+	          textAlign: 'center',
+	          borderRadius: '5px',
+	          textDecoration: 'none',
+	          cursor: 'pointer',
+	          marginLeft: '43%',
+	          marginTop: '2rem',
+	          marginBottom: '2rem'
+	
+	        }
+	      }, 'col', {
+	        margin: '0 auto'
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.div },
+	          _react2.default.createElement(
+	            _Grid2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Row2.default,
+	              null,
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/haoxiaojun_89.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '郝小军'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:乐视'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1500元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:河北科技师范学院'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/daijinming_91.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '戴金明'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:北京链家地产'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1200元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:河北科技师范学院'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/jiangwen_96.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '姜文'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:百度'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1300元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:东北石油'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/sunlulu_93.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '孙路路'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:优酷土豆'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1500元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:河北科技师范学院'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _Grid2.default,
+	            null,
+	            _react2.default.createElement(
+	              _Row2.default,
+	              null,
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/yuhao_102.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '余浩'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:网易'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '30万'
+	                      ),
+	                      '/年'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:武汉大学'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/zhangjunya_103.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '张君雅'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:HTC'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1500元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:南京艺术师范学校'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/wangshaojun_104.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '王少静'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:小米科技'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1500元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:河北理工学校'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _Col2.default,
+	                { xs: 5, md: 3 },
+	                _react2.default.createElement(
+	                  _Thumbnail2.default,
+	                  { src: 'http://oboi4l44j.bkt.clouddn.com/kongyu_105.jpg', alt: '242x200' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'caption' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      null,
+	                      '孔越'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '就职:乐视'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '薪资:',
+	                      _react2.default.createElement(
+	                        'span',
+	                        { style: styles.span },
+	                        '1200元'
+	                      ),
+	                      '/月'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      null,
+	                      '毕业院校:沈阳大学'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { style: styles.a },
+	            '了解更多就业学员信息>'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            { style: styles.p },
+	            '他们已经实现了',
+	            _react2.default.createElement(
+	              'span',
+	              { style: styles.span },
+	              '完美蜕变'
+	            ),
+	            ',月薪万元',
+	            _react2.default.createElement(
+	              'span',
+	              { style: styles.span },
+	              '只需一个电话'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Four;
+	}(_react2.default.Component);
+	
+	exports.default = Four;
+
+/***/ },
+/* 921 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_React$Component) {
+	  _inherits(Footer, _React$Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      var styles = {
+	        root: {
+	          width: '100%',
+	          background: 'url("http://oboi4l44j.bkt.clouddn.com/footerbg_110.jpg") no-repeat  center center/cover',
+	          height: '350px',
+	          position: 'relative'
+	        },
+	        img: {
+	          width: '35%',
+	          height: '15rem',
+	          position: 'absolute',
+	          right: '15%',
+	          bottom: '1px'
+	        }
+	      };
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.root },
+	          _react2.default.createElement(
+	            'div',
+	            { style: { paddingTop: '2.6rem', paddingLeft: '20rem', width: '50%' } },
+	            _react2.default.createElement(
+	              'h2',
+	              { style: { color: '#fff', fontSize: "3.5rem" } },
+	              '高薪就业学习就选第嘉学社'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { color: '#fff', fontSize: '1rem' } },
+	              '秦皇岛第嘉'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { style: { color: 'yellow', fontSize: '1rem' } },
+	              '秦皇岛市海港区金梦海湾1号秦海璐84号4层 电话:0335-7104491   15703387810   18733401116'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { color: '#fff', fontSize: '1rem' } },
+	              '北京第嘉'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { style: { color: 'yellow', fontSize: '1rem' } },
+	              '北京朝阳区建国路93号万达广场写字楼A 电话:400-600-7366'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { color: '#fff', fontSize: '1rem' } },
+	              '沈阳第嘉'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { style: { color: 'yellow', fontSize: '1rem' } },
+	              '沈阳市生北新区道义南大街江南第D座10-27 电话:400-600 7366'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { style: { color: '#fff', fontSize: '1rem' } },
+	              '深圳第嘉'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { style: { color: 'yellow', fontSize: '1rem' } },
+	              '秦皇岛市海港区金梦海湾1号秦海璐84号4层 电话:0335-7104491'
+	            )
+	          ),
+	          _react2.default.createElement('img', { src: 'http://oboi4l44j.bkt.clouddn.com/katong_03.png', style: styles.img })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react2.default.Component);
+	
+	exports.default = Footer;
+
+/***/ },
+/* 922 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {var invariant = __webpack_require__(923);
+	var defaultClickRejectionStrategy = __webpack_require__(924);
 	
 	var alreadyInjected = false;
 	
@@ -104952,14 +105539,14 @@
 	  alreadyInjected = true;
 	
 	  __webpack_require__(45).injection.injectEventPluginsByName({
-	    'TapEventPlugin':       __webpack_require__(923)(shouldRejectClick)
+	    'TapEventPlugin':       __webpack_require__(925)(shouldRejectClick)
 	  });
 	};
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 921 */
+/* 923 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -105014,7 +105601,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 922 */
+/* 924 */
 /***/ function(module, exports) {
 
 	module.exports = function(lastTouchEvent, clickTimestamp) {
@@ -105025,7 +105612,7 @@
 
 
 /***/ },
-/* 923 */
+/* 925 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -105053,10 +105640,10 @@
 	var EventPluginUtils = __webpack_require__(47);
 	var EventPropagators = __webpack_require__(44);
 	var SyntheticUIEvent = __webpack_require__(78);
-	var TouchEventUtils = __webpack_require__(924);
+	var TouchEventUtils = __webpack_require__(926);
 	var ViewportMetrics = __webpack_require__(79);
 	
-	var keyOf = __webpack_require__(925);
+	var keyOf = __webpack_require__(927);
 	var topLevelTypes = EventConstants.topLevelTypes;
 	
 	var isStartish = EventPluginUtils.isStartish;
@@ -105201,7 +105788,7 @@
 
 
 /***/ },
-/* 924 */
+/* 926 */
 /***/ function(module, exports) {
 
 	/**
@@ -105249,7 +105836,7 @@
 
 
 /***/ },
-/* 925 */
+/* 927 */
 /***/ function(module, exports) {
 
 	/**
